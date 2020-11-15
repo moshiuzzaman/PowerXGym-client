@@ -1,0 +1,28 @@
+span.singleStap {
+    background: gray;
+    padding: 12px 24px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.activestep{
+    background: #ffe000;
+    padding: 12px 24px;
+    border-radius: 50%;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+.centerstep {
+    border-bottom: 6px dotted #9d9d9d;
+    position: absolute;
+    left: 33%;
+    top: 51%;
+    z-index: -2;
+    width: 183%;
+}
+.allSteps{
+    position: relative;
+}
