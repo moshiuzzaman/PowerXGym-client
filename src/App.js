@@ -15,6 +15,8 @@ import Notfound from './components/Notfound/Notfound';
 import MembershipForm from './components/MembershipForm/MembershipForm';
 import Pricing from './components/Pricing/Pricing';
 import Payment from './components/Payment/Payment';
+import Classes from './components/Classes/Classes';
+import ClassDescription from './components/Classes/ClassDescription';
 
 function App() {
   return (
@@ -38,6 +40,13 @@ function App() {
           <Training></Training>
           <ChooseUs></ChooseUs>
           <Footer></Footer>
+        </Route>
+        <Route exact path="/ourClasses">
+          <Classes></Classes>
+        </Route>
+
+        <Route exact path="/class/:className">
+          <ClassDescription></ClassDescription>
         </Route>
         <Route path="*">
           <Notfound></Notfound>

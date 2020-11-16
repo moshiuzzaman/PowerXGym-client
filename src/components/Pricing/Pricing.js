@@ -1,11 +1,17 @@
-import React from 'react';
-import { AllPrice } from '../../Fakedata/AllPrice';
+import React, { useState } from 'react';
+import { useEffect } from 'react/cjs/react.development';
 import Footer from '../Footer/Footer';
 import Header from '../Shared/Header/Header';
 import SinglePrice from './SinglePrice';
 
 const Pricing = () => {
-    
+    const [AllPrice, setAllPrice] =useState([])
+    useEffect(() => {
+        fetch('http://localhost:5000/AllPrices')
+        .then(res => res.json())
+        .then(data =>setAllPrice(data))
+    }, [])
+
     return (
         <div >
             <Header name="Pricing Plans"/>
